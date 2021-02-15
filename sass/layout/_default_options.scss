@@ -1,0 +1,53 @@
+/*============ Настройки по умолчанию ============*/
+body {
+  letter-spacing: 0.03em;
+  background-color: $color-background-white;
+  color: $color-text-primary;
+  font-family: $font-family-primary;
+}
+
+/*container*/
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*текущая страница*/
+
+/*заголовки*/
+.caption {
+  margin: 0;
+}
+
+/*текст/абзац*/
+.text {
+  margin: 0;
+
+  color: $color-text-second;
+
+  font-weight: 400;
+}
+
+/*кнопки*/
+.btn {
+  border: none;
+}
+
+/*сылки*/
+.link {
+  font-family: $font-family-primary;
+  text-decoration: none;
+}
+
+/*списки*/
+.without-dot {
+  list-style: none;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+}

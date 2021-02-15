@@ -1,0 +1,14 @@
+.section-direction {
+  &__container {
+    padding-bottom: 94px;
+  }
+
+  &__caption {
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}

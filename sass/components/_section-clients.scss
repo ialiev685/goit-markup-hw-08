@@ -1,0 +1,37 @@
+/*Постоянные клиенты*/
+/*============ Наши клиенты ============*/
+.section-clients {
+  &__caption {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+  }
+
+  &__link {
+    /* цвет для иконок - базовый*/
+    color: $color-fill-usual;
+
+    display: inline-flex;
+    width: 170px;
+    height: 90px;
+    border: 1px solid $color-fill-usual;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+
+    transition: color $transition-duration-timing,
+      border-color $transition-duration-timing;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    border-color: $color-fill-accent;
+    /* цвет для иконок при наведении*/
+    color: $color-fill-accent;
+  }
+
+  &__icon-client {
+    fill: currentColor;
+  }
+}

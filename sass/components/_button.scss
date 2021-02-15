@@ -1,0 +1,84 @@
+/* стиль кнопки button вызова модального окна и отправки */
+
+.button {
+  padding: 6px 22px;
+
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $color-text-primary;
+
+  border-radius: 4px;
+  outline: none;
+  border: 0;
+
+  background: $color-backgaround-button;
+
+  cursor: pointer;
+
+  transition: color $transition-duration-timing,
+    background-color $transition-duration-timing;
+
+  /*синяя кнопка*/
+  &--primary {
+    display: inline-flex;
+    align-items: center;
+
+    font-weight: 700;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+
+    padding: 10px 32px;
+    color: $color-text-inverse;
+
+    background-color: $color-background-accent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  &__icon-plane {
+    margin-left: 10px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-background-accent;
+    color: $color-text-inverse;
+
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  &--social-network {
+    /* цвет для иконок */
+    color: $color-fill-usual;
+
+    display: inline-flex;
+    padding: 12px 12px;
+    // width: 44px;
+    // height: 44px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+
+    transition: color $transition-duration-timing,
+      background-color $transition-duration-timing;
+  }
+
+  &--social-network:hover,
+  &--social-network:focus {
+    background-color: $color-background-accent;
+    color: $color-fill-light;
+  }
+
+  &--social-network-inverse {
+    background-color: $color-bg-transparent-social;
+    color: $color-fill-light;
+  }
+
+  &__icon-social {
+    fill: currentColor;
+  }
+}
