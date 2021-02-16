@@ -1,0 +1,19 @@
+.menu-button {
+  display: inline-flex;
+  padding: 12px 8px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  z-index: 1;
+
+  &__icon-cross {
+    display: none;
+  }
+
+  &.is-open &__icon-burger {
+    display: none;
+  }
+  &.is-open &__icon-cross {
+    display: block;
+  }
+}

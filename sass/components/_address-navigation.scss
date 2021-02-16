@@ -1,28 +1,50 @@
-/*адрес(телефон и маил)*/
 .address-nav {
-  &__link {
-    color: $color-text-second;
-
+  display: flex;
+  flex-wrap: wrap-reverse;
+  &__item:nth-child(2) &__link {
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 34px;
+    line-height: 1.176;
     letter-spacing: 0.02em;
-
-    transition: color $transition-duration-timing;
-
-    display: flex;
-    align-items: center;
-  }
-
-  &__link:hover,
-  &__link:focus {
     color: $color-text-accent;
   }
 
-  &__icon-mail,
-  &__icon-smartphone {
-    margin-right: 10px;
-    fill: currentColor;
+  &__item:nth-child(1) &__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+
+    color: $color-text-second;
   }
 }
+/*адрес(телефон и маил)*/
+// .address-nav {
+//   &__link {
+//     color: $color-text-second;
+
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 14px;
+//     line-height: 1.14;
+//     letter-spacing: 0.02em;
+
+//     transition: color $transition-duration-timing;
+
+//     display: flex;
+//     align-items: center;
+//   }
+
+//   &__link:hover,
+//   &__link:focus {
+//     color: $color-text-accent;
+//   }
+
+//   &__icon-mail,
+//   &__icon-smartphone {
+//     margin-right: 10px;
+//     fill: currentColor;
+//   }
+// }

@@ -1,54 +1,110 @@
-/*Контенер header*/
 .header {
+  position: relative;
+
+  margin-left: auto;
+  margin-right: auto;
   background-color: $color-background-white;
   border-bottom: 1px solid $color-border-header;
 
   &__container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 60px;
+    @media screen and (min-width: $mobile) {
+    }
   }
 }
 
-/*логотип*/
-.navigation {
-  &__logo {
-    margin-right: 93px;
+.address-nav {
+  margin-bottom: 64px;
+  &__icon-mail,
+  &__icon-smartphone {
+    display: none;
   }
-  &__half-logo {
-    color: $color-text-primary;
+  @media screen and(min-width:$mobile) {
   }
 }
-/*навигация сайта и адрес*/
+
 .address-nav,
 .site-nav {
-  display: flex;
-
-  &__item:not(:last-child) {
-    margin-right: 50px;
+  &__item {
+    margin-bottom: 32px;
+  }
+  @media screen and (min-width: $mobile) {
   }
 }
 
-.address-nav__link,
-.site-nav__link {
-  padding-top: 32px;
-  padding-bottom: 32px;
+.menu-container {
+  padding: 48px 40px;
+  &.is-open {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  @media screen and (min-width: $mobile) {
+  }
 }
 
-/*адрес*/
-.address {
-  margin-left: auto;
-}
-
-/*навигация*/
-.navigation {
+.mobile-social-network {
+  // width: 358px;
   display: flex;
-  align-items: center;
+  // justify-content: space-between;
 }
 
-/* Отметка о текущей странице */
-.current::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
+/*old style desctop*/
+// /*Контенер header*/
+// .header {
+//   background-color: $color-background-white;
+//   border-bottom: 1px solid $color-border-header;
+//   position: relative;
+
+//   &__container {
+//     display: flex;
+//     align-items: center;
+//     height: 80px;
+//   }
+// }
+
+// /*логотип*/
+// .navigation {
+//   &__logo {
+//     margin-right: 93px;
+//   }
+//   &__half-logo {
+//     color: $color-text-primary;
+//   }
+// }
+// /*навигация сайта и адрес*/
+// .address-nav,
+// .site-nav {
+//   display: flex;
+
+//   &__item:not(:last-child) {
+//     margin-right: 50px;
+//   }
+// }
+
+// .address-nav__link,
+// .site-nav__link {
+//   padding-top: 32px;
+//   padding-bottom: 32px;
+// }
+
+// /*адрес*/
+// .address {
+//   margin-left: auto;
+// }
+
+// /*навигация*/
+// .navigation {
+//   display: flex;
+//   align-items: center;
+// }
+
+// /* Отметка о текущей странице */
+// .current::after {
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+// }
