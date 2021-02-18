@@ -1,22 +1,19 @@
-/*скрыть название*/
-.hide {
-  height: 0;
-  text-align: center;
-  color: $color-text-inverse;
-}
-
 .section-item {
   &__filters {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
 
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 34px;
+    // justify-content: space-between;
+
+    // margin-left: auto;
+    // margin-right: auto;
+    // margin-bottom: 34px;
+    margin-bottom: 40px;
   }
   &__container {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   &__caption {
     margin-bottom: 4px;
