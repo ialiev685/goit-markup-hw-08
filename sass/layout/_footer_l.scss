@@ -1,24 +1,34 @@
 /*============ footer ============*/
 .footer {
   background-color: $color-background-gray;
+
   &__container {
     padding-top: 60px;
     padding-bottom: 60px;
 
     display: flex;
+    flex-direction: column;
   }
+
   &__form {
     display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 }
 /*отступ input"*/
-.input {
-  margin-right: 12px;
+
+.input--size-l {
+  // margin-right: 12px;
+  margin-bottom: 20px;
 }
 
 /*контейнер с адресом*/
 .container-address {
-  margin-right: 70px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
 
   &__logo {
     display: block;
@@ -47,10 +57,14 @@
 
 /*контейнер социальные сети*/
 .container-social {
-  margin-right: 93px;
+  // margin-right: 93px;
+  margin-bottom: 60px;
 
   /*Кнопки соццальных сетей*/
   &__social-links {
+    margin-left: auto;
+    margin-right: auto;
+
     width: 206px;
 
     display: flex;
@@ -61,8 +75,8 @@
 /*общие параметры контейнера социальные сети и подписки*/
 .container-social,
 .container-subscribe {
-  margin-top: 12px;
-
+  // margin-top: 12px;
+  text-align: center;
   &__text {
     margin-bottom: 20px;
 
