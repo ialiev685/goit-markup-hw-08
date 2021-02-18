@@ -1,15 +1,16 @@
 /*============ Настройки по умолчанию ============*/
 
 /*old style desktop*/
-// body {
-//   letter-spacing: 0.03em;
-//   background-color: $color-background-white;
-//   color: $color-text-primary;
-//   font-family: $font-family-primary;
-// }
+body {
+  letter-spacing: 0.03em;
+  background-color: $color-background-white;
+  color: $color-text-primary;
+  font-family: $font-family-primary;
+}
 
 /*container*/
 .container {
+  outline: 1px solid tomato;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -17,14 +18,17 @@
   @media screen and (min-width: $mobile) {
     width: $mobile;
   }
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
 }
 
 // /*текущая страница*/
 
-// /*заголовки*/
-// .caption {
-//   margin: 0;
-// }
+/*заголовки*/
+.caption {
+  margin: 0;
+}
 
 // /*текст/абзац*/
 // .text {

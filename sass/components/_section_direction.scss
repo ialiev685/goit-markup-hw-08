@@ -1,37 +1,43 @@
 /*section-direction*/
-/*============ Чем занимаемся ============*/
 .section-direction {
-  &__caption {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-  }
-
-  &__item {
-    position: relative;
-
-    height: 294px;
-  }
-
-  &__text {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    width: 100%;
-    height: 70px;
-
-    padding-top: 27px;
-    padding-bottom: 27px;
-
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-align: center;
-    text-transform: uppercase;
-
-    color: $color-text-inverse;
-    background-color: $color-bg-transparent-direction;
-  }
+  display: none;
 }
+
+/*old style desktop*/
+/*============ Чем занимаемся ============*/
+// .section-direction {
+
+//   &__caption {
+//     font-weight: 700;
+//     font-size: 36px;
+//     line-height: 1.16;
+//     text-align: center;
+//   }
+
+//   &__item {
+//     position: relative;
+
+//     height: 294px;
+//   }
+
+//   &__text {
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+
+//     width: 100%;
+//     height: 70px;
+
+//     padding-top: 27px;
+//     padding-bottom: 27px;
+
+//     font-weight: 700;
+//     font-size: 14px;
+//     line-height: 1.14;
+//     text-align: center;
+//     text-transform: uppercase;
+
+//     color: $color-text-inverse;
+//     background-color: $color-bg-transparent-direction;
+//   }
+// }

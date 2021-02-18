@@ -1,26 +1,61 @@
 /*section-order*/
 /*============ Сделать заказ ============*/
+
 .section-order {
-  background-size: cover;
-  height: 600px;
   background-image: linear-gradient(
       to right,
       $color-bg-transparent-overlay,
       $color-bg-transparent-overlay
     ),
-    url("../img/studio/bg-order.jpg");
+    url("../../img/studio/mobile-order-480x400.jpg");
   background-position: center;
+  background-size: cover;
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        $color-bg-transparent-overlay,
+        $color-bg-transparent-overlay
+      ),
+      url("../../img/studio/mobile-order-960x800@2x.jpg");
+  }
 
   &__caption {
-    width: 696px;
-
     color: $color-text-inverse;
+    max-width: 360px;
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.615;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
   }
 }
+
+/*old style desctop*/
+// .section-order {
+//   background-size: cover;
+//   height: 600px;
+//   background-image: linear-gradient(
+//       to right,
+//       $color-bg-transparent-overlay,
+//       $color-bg-transparent-overlay
+//     ),
+//     url("../img/studio/bg-order.jpg");
+//   background-position: center;
+
+//   &__caption {
+//     width: 696px;
+
+//     color: $color-text-inverse;
+
+//     font-weight: 900;
+//     font-size: 44px;
+//     line-height: 1.36;
+//     text-align: center;
+//     letter-spacing: 0.06em;
+//     text-transform: uppercase;
+//   }
+// }

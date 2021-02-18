@@ -1,12 +1,12 @@
 .header {
-  position: relative;
-
   margin-left: auto;
   margin-right: auto;
   background-color: $color-background-white;
   border-bottom: 1px solid $color-border-header;
 
   &__container {
+    position: relative;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,6 +50,13 @@
   // width: 358px;
   display: flex;
   // justify-content: space-between;
+}
+
+/*логотип*/
+.navigation {
+  &__half-logo {
+    color: $color-text-primary;
+  }
 }
 
 /*old style desctop*/

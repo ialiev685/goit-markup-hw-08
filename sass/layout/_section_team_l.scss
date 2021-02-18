@@ -1,8 +1,16 @@
 .section-team {
   background-color: $color-bakcground-darkwhite;
   &__container {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+  }
+
+  &__item {
+    padding-bottom: 24px;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
   }
 
   &__photo {
@@ -29,7 +37,7 @@
   }
 
   &__caption--main {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   &__caption--name {
