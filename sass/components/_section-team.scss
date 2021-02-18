@@ -2,6 +2,25 @@
 .section-team {
   background-color: $color-bakcground-darkwhite;
 
+  &__caption {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.16;
+    text-align: center;
+  }
+
+  &__caption--name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+  }
+
   &__photo {
     display: block;
     max-width: 100%;
