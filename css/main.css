@@ -240,6 +240,7 @@ body {
 
 /*container*/
 .container {
+  outline: 1px solid tomato;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -249,6 +250,18 @@ body {
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
   }
 }
 
@@ -930,14 +943,6 @@ body {
   padding: 20px 24px;
 }
 
-.section-item__filters {
-  width: 611px;
-}
-
-.section-item__item {
-  width: 370px;
-}
-
 .section-item__item:hover {
   cursor: pointer;
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -976,10 +981,36 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  margin-bottom: 40px;
+  max-width: 611px;
+}
+
+@media screen and (min-width: 768px) {
+  .section-item__filters {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 34px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .section-item__filters {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: -15px;
+  }
+  .section-item__filters .button {
+    margin-right: 8px;
+    margin-bottom: 15px;
+  }
+}
+
+.section-item__image {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .section-item__container {
@@ -1002,6 +1033,12 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .section-item__product {
+    margin-top: 40px;
+  }
 }
 
 .section-item__item {

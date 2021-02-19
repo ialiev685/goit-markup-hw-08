@@ -1,15 +1,29 @@
 .section-item {
   &__filters {
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+    max-width: 611px;
 
-    // justify-content: space-between;
+    @media screen and (min-width: $tablet) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 34px;
+      justify-content: space-between;
+    }
+    @media screen and (min-width: $mobile-s) and (max-width: $tablet - 1) {
+      flex-wrap: wrap;
+      margin-bottom: -15px;
 
-    // margin-left: auto;
-    // margin-right: auto;
-    // margin-bottom: 34px;
-    margin-bottom: 40px;
+      & .button {
+        margin-right: 8px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__image {
+    display: block;
+    max-width: 100%;
+    height: auto;
   }
   &__container {
     padding-top: 60px;
@@ -21,6 +35,10 @@
 
   &__product {
     /* убрать у последнего ряда отступы */
+
+    @media screen and (min-width: $mobile-s) and (max-width: $tablet - 1) {
+      margin-top: 40px;
+    }
     margin-bottom: -30px;
 
     display: flex;
