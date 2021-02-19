@@ -1,16 +1,18 @@
 .menu-container {
-  display: none;
+  @media screen and (min-width: $mobile-s) and (max-width: $tablet - 1) {
+    display: none;
 
-  position: absolute;
-  top: 0;
-  left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 
-  max-width: $mobile;
-  width: 100%;
-  height: 100vh;
+    max-width: $mobile;
+    width: 100%;
+    height: 100vh;
 
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 
-  background-color: $color-background-white;
+    background-color: $color-background-white;
+  }
 }

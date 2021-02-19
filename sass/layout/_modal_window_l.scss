@@ -6,6 +6,10 @@
 
   padding: 40px;
 
+  @media screen and(min-width: $mobile-s) and(max-width: $mobile - 1) {
+    padding: 26px;
+  }
+
   transform: translate(-50%, -50%);
 
   &__caption {

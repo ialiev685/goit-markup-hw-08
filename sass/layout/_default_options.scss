@@ -1,6 +1,5 @@
 /*============ Настройки по умолчанию ============*/
 
-/*old style desktop*/
 body {
   letter-spacing: 0.03em;
   background-color: $color-background-white;
@@ -10,7 +9,7 @@ body {
 
 /*container*/
 .container {
-  outline: 1px solid tomato;
+  // outline: 1px solid tomato;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -26,8 +25,6 @@ body {
   }
 }
 
-// /*текущая страница*/
-
 /*заголовки*/
 .caption {
   margin: 0;
@@ -41,11 +38,6 @@ body {
 
   font-weight: 400;
 }
-
-// /*кнопки*/
-// .btn {
-//   border: none;
-// }
 
 /*сылки*/
 .link {

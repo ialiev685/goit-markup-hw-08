@@ -1,23 +1,62 @@
 .address-nav {
-  display: flex;
-  flex-wrap: wrap-reverse;
-  &__item:nth-child(2) &__link {
+  &__link {
     font-style: normal;
     font-weight: 500;
-    font-size: 34px;
-    line-height: 1.176;
     letter-spacing: 0.02em;
-    color: $color-text-accent;
-  }
 
-  &__item:nth-child(1) &__link {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1.16;
-    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
 
     color: $color-text-second;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 12px;
+      line-height: 1.16;
+    }
+
+    @media screen and(min-width: $desktop) {
+      font-size: 14px;
+      line-height: 1.14;
+      transition: color $transition-duration-timing;
+    }
+  }
+  @media screen and(min-width: $mobile-s) and (max-width: $tablet - 1) {
+    display: flex;
+    flex-wrap: wrap-reverse;
+
+    &__item:nth-child(2) &__link {
+      font-size: 34px;
+      line-height: 1.176;
+
+      color: $color-text-accent;
+
+      @media screen and (min-width: $mobile-s) and (max-width: $mobile - 1) {
+        font-size: 22px;
+      }
+    }
+
+    &__item:nth-child(1) &__link {
+      font-size: 24px;
+      line-height: 1.16;
+      @media screen and (min-width: $mobile-s) and (max-width: $mobile - 1) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__icon-mail,
+  &__icon-smartphone {
+    @media screen and(min-width: $tablet) {
+      fill: currentColor;
+      margin-right: 10px;
+    }
+  }
+
+  &__link:hover,
+  &__link:focus {
+    @media screen and(min-width: $desktop) {
+      color: $color-text-accent;
+    }
   }
 }
 /*адрес(телефон и маил)*/
@@ -37,14 +76,4 @@
 //     align-items: center;
 //   }
 
-//   &__link:hover,
-//   &__link:focus {
-//     color: $color-text-accent;
-//   }
-
-//   &__icon-mail,
-//   &__icon-smartphone {
-//     margin-right: 10px;
-//     fill: currentColor;
-//   }
 // }
