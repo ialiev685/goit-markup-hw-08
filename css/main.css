@@ -627,16 +627,16 @@ body {
 /*section-order*/
 /*============ Сделать заказ ============*/
 .section-order {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../img/studio/mobile-order-480x400.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../img/studio/mobile-order-480x400.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../img/studio/mobile-order-480x400.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/studio/mobile-order-480x400.jpg");
   background-position: center;
   background-size: cover;
 }
 
 @media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .section-order {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../img/studio/mobile-order-960x800@2x.jpg");
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../img/studio/mobile-order-960x800@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../img/studio/mobile-order-960x800@2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/studio/mobile-order-960x800@2x.jpg");
   }
 }
 
@@ -907,36 +907,92 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .footer__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
-/*отступ input"*/
-.input--size-l {
-  margin-bottom: 20px;
+@media screen and (min-width: 320px) and (max-width: 1199px) {
+  .footer__form {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/*отступ input*/
+@media screen and (min-width: 320px) and (max-width: 1199px) {
+  .input--size-l {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .input--size-l {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .input--size-l {
+    width: 358px;
+    margin-right: 12px;
+  }
 }
 
 /*контейнер с адресом*/
 .container-address {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .container-address {
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container-address {
+    text-align: left;
+  }
 }
 
 .container-address__logo {
@@ -962,6 +1018,11 @@ body {
   display: block;
 }
 
+.container-subscribe {
+  max-width: 570px;
+  width: 100%;
+}
+
 /*контейнер социальные сети*/
 .container-social {
   margin-bottom: 60px;
@@ -969,8 +1030,6 @@ body {
 }
 
 .container-social__social-links {
-  margin-left: auto;
-  margin-right: auto;
   width: 206px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -984,6 +1043,14 @@ body {
 .container-social,
 .container-subscribe {
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .container-social,
+  .container-subscribe {
+    margin-top: 12px;
+    text-align: left;
+  }
 }
 
 .container-social__text,

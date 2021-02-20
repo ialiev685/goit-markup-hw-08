@@ -7,7 +7,7 @@
       $color-bg-transparent-overlay,
       $color-bg-transparent-overlay
     ),
-    url("../../img/studio/mobile-order-480x400.jpg");
+    url("../img/studio/mobile-order-480x400.jpg");
   background-position: center;
   background-size: cover;
   @media screen and (min-device-pixel-ratio: 2),
@@ -18,7 +18,7 @@
         $color-bg-transparent-overlay,
         $color-bg-transparent-overlay
       ),
-      url("../../img/studio/mobile-order-960x800@2x.jpg");
+      url("../img/studio/mobile-order-960x800@2x.jpg");
   }
 
   &__caption {

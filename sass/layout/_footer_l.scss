@@ -7,29 +7,58 @@
     padding-bottom: 60px;
 
     display: flex;
-    flex-direction: column;
+    @media screen and (min-width: $mobile-s) and (max-width: $tablet - 1) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media screen and (min-width: $tablet) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @media screen and (min-width: $desktop) {
+      justify-content: space-between;
+    }
   }
 
   &__form {
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    @media screen and (min-width: $mobile-s) and (max-width: $desktop - 1) {
+      align-items: center;
+      flex-direction: column;
+    }
+
+    @media screen and (min-width: $desktop) {
+    }
   }
 }
-/*отступ input"*/
 
+/*отступ input*/
 .input--size-l {
-  // margin-right: 12px;
-  margin-bottom: 20px;
+  @media screen and (min-width: $mobile-s) and (max-width: $desktop - 1) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and(min-width: $mobile) {
+    width: 450px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+    margin-right: 12px;
+  }
 }
 
 /*контейнер с адресом*/
 .container-address {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 60px;
 
+  margin-bottom: 60px;
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
+    margin-right: auto;
+  }
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+  }
   &__logo {
     display: block;
     margin-bottom: 20px;
@@ -55,16 +84,17 @@
   }
 }
 
+.container-subscribe {
+  max-width: 570px;
+  width: 100%;
+}
+
 /*контейнер социальные сети*/
 .container-social {
-  // margin-right: 93px;
   margin-bottom: 60px;
 
   /*Кнопки соццальных сетей*/
   &__social-links {
-    margin-left: auto;
-    margin-right: auto;
-
     width: 206px;
 
     display: flex;
@@ -75,8 +105,12 @@
 /*общие параметры контейнера социальные сети и подписки*/
 .container-social,
 .container-subscribe {
-  // margin-top: 12px;
   text-align: center;
+
+  @media screen and(min-width: $desktop) {
+    margin-top: 12px;
+    text-align: left;
+  }
   &__text {
     margin-bottom: 20px;
 
