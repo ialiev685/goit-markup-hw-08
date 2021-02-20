@@ -6,6 +6,18 @@
 
   &__item {
     margin-bottom: 30px;
+    @media screen and (min-width: $mobile-s) {
+      flex-basis: 100%;
+    }
+    @media screen and (min-width: $mobile) {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+    @media screen and (min-width: $tablet) {
+      flex-basis: calc((100% - 30px * 2) / 3);
+    }
+    @media screen and (min-width: $desktop) {
+      flex-basis: calc((100% - 30px * 5) / 6);
+    }
   }
 
   &__caption {
