@@ -1,15 +1,15 @@
-/*old style desktop*/
-// .section-direction {
-//   &__container {
-//     padding-bottom: 94px;
-//   }
+.section-direction {
+  &__container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
-//   &__caption {
-//     margin-bottom: 50px;
-//   }
+  &__caption {
+    margin-bottom: 50px;
+  }
 
-//   &__list {
-//     display: flex;
-//     justify-content: space-between;
-//   }
-// }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
