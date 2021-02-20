@@ -7,6 +7,9 @@
     font-size: 28px;
     line-height: 1.16;
     text-align: center;
+    @media screen and (min-width: $desktop) {
+      font-size: 36px;
+    }
   }
 
   &__caption--name {
@@ -64,9 +67,3 @@
 //     line-height: 1.16;
 //     text-align: center;
 //   }
-//   &__caption--name {
-//     font-weight: 500;
-//     font-size: 16px;
-//     line-height: 1.18;
-//   }
-// }

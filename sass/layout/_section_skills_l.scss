@@ -2,15 +2,39 @@
   &__container {
     padding-top: 60px;
     padding-bottom: 60px;
+    @media screen and (min-midth: $desktop) {
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
   }
   &__caption {
     text-align: center;
+
     margin-bottom: 10px;
+    @media screen and (min-width: $tablet) {
+      text-align: left;
+    }
   }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-bottom: -30px;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    @media screen and (min-width: $mobile-s) {
+      flex-basis: 100%;
+    }
+    @media screen and (min-width: $tablet) {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+    @media screen and (min-width: $desktop) {
+      flex-basis: calc((100% - 30px * 3) / 4);
+    }
   }
 
   &__icon-skill {
