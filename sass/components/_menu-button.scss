@@ -3,11 +3,17 @@
     display: none;
   }
   display: inline-flex;
+
   padding: 12px 8px;
+
   border: none;
   outline: none;
   background-color: transparent;
-  z-index: 1;
+
+  z-index: 2;
+
+  cursor: pointer;
+  transition: color $transition-duration-timing;
 
   &__icon-cross {
     display: none;
@@ -18,5 +24,13 @@
   }
   &.is-open &__icon-cross {
     display: block;
+  }
+
+  &:hover {
+    color: $color-text-accent;
+  }
+
+  &__icons {
+    fill: currentColor;
   }
 }

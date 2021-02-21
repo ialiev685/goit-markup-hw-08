@@ -7,7 +7,7 @@
       $color-bg-transparent-overlay,
       $color-bg-transparent-overlay
     ),
-    url("../img/studio/mobile-order-480x400.jpg");
+    url("../img/studio/order-768x400.jpg");
   background-position: center;
   background-size: cover;
   @media screen and (min-device-pixel-ratio: 2),
@@ -18,12 +18,12 @@
         $color-bg-transparent-overlay,
         $color-bg-transparent-overlay
       ),
-      url("../img/studio/mobile-order-960x800@2x.jpg");
+      url("../img/studio/order-1536x800@2x.jpg");
   }
 
   &__caption {
     color: $color-text-inverse;
-    max-width: 360px;
+    width: 360px;
 
     font-weight: 900;
     font-size: 26px;
@@ -31,31 +31,11 @@
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    @media screen and (min-width: $desktop) {
+      width: 696px;
+
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
 }
-
-/*old style desctop*/
-// .section-order {
-//   background-size: cover;
-//   height: 600px;
-//   background-image: linear-gradient(
-//       to right,
-//       $color-bg-transparent-overlay,
-//       $color-bg-transparent-overlay
-//     ),
-//     url("../img/studio/bg-order.jpg");
-//   background-position: center;
-
-//   &__caption {
-//     width: 696px;
-
-//     color: $color-text-inverse;
-
-//     font-weight: 900;
-//     font-size: 44px;
-//     line-height: 1.36;
-//     text-align: center;
-//     letter-spacing: 0.06em;
-//     text-transform: uppercase;
-//   }
-// }

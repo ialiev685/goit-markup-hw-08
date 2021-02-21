@@ -60,22 +60,21 @@
     display: flex;
     flex-direction: column;
   }
+
   @media screen and (min-width: $tablet) {
     align-items: center;
+    &.is-open {
+      flex-direction: unset;
+    }
   }
-  @media screen and (min-width: $mobile) and (max-width: $tablet - 1) {
+  @media screen and (min-width: $mobile-s) and (max-width: $tablet - 1) {
     padding: 48px 40px;
-  }
-  @media screen and (min-width: $mobile-s) and (max-width: $mobile - 1) {
-    padding: 48px 26px;
   }
 }
 
 .mobile-social-network {
   &__list {
-    // width: 358px;
     display: flex;
-    // justify-content: space-between;
   }
 }
 
@@ -103,62 +102,3 @@
     margin-right: 305px;
   }
 }
-
-/*old style desctop*/
-// /*Контенер header*/
-// .header {
-//   background-color: $color-background-white;
-//   border-bottom: 1px solid $color-border-header;
-//   position: relative;
-
-//   &__container {
-//     display: flex;
-//     align-items: center;
-//     height: 80px;
-//   }
-// }
-
-// /*логотип*/
-// .navigation {
-//   &__logo {
-//     margin-right: 93px;
-//   }
-//   &__half-logo {
-//     color: $color-text-primary;
-//   }
-// }
-/*навигация сайта и адрес*/
-
-/*навигация сайта и адрес*/
-// .address-nav,
-// .site-nav {
-//   display: flex;
-
-//   &__item:not(:last-child) {
-//     margin-right: 50px;
-//   }
-// }
-
-// .address-nav__link,
-// .site-nav__link {
-//   padding-top: 32px;
-//   padding-bottom: 32px;
-// }
-
-// /*адрес*/
-// .address {
-//   margin-left: auto;
-// }
-
-// /*навигация*/
-// .navigation {
-//   display: flex;
-//   align-items: center;
-// }
-
-/* Отметка о текущей странице */
-// .current::after {
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-// }

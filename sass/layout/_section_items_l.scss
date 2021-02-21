@@ -34,8 +34,6 @@
   }
 
   &__product {
-    /* убрать у последнего ряда отступы */
-
     @media screen and (min-width: $mobile-s) and (max-width: $tablet - 1) {
       margin-top: 40px;
     }

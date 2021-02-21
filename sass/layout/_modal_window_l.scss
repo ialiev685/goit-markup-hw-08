@@ -4,17 +4,18 @@
   top: 50%;
   left: 50%;
 
-  padding: 40px;
-
-  @media screen and(min-width: $mobile-s) and(max-width: $mobile - 1) {
-    padding: 26px;
+  padding: 26px;
+  @media screen and(min-width: $mobile) {
+    padding: 39px;
   }
 
   transform: translate(-50%, -50%);
 
   &__caption {
-    // margin-bottom: 12px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    @media screen and(min-width: $mobile) {
+      margin-bottom: 30px;
+    }
   }
 }
 
