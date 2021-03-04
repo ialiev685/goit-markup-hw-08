@@ -22,53 +22,93 @@
     <header class="header portfolio">
       <!--меню-->
       <div class="container header__container">
-        <nav class="navigation">
-          <a href="/" class="logo navigation__logo"
-            >Web<span class="navigation__half-logo">Studio</span></a
-          >
-          <ul class="site-nav without-dot list">
-            <li class="site-nav__item">
-              <a class="link site-nav__link" href="index.html">Студия</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="link site-nav__link current" href="portfolio.html"
-                >Портфолио</a
-              >
-            </li>
-            <li class="site-nav__item">
-              <a class="link site-nav__link" href="/">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <!--/меню-->
-        <!--адрес-->
-        <address class="address">
-          <ul class="address-nav without-dot list">
-            <li class="address-nav__item">
-              <a
-                class="link address-nav__link mail"
-                href="mailto:info@devstudio.com"
-              >
-                <svg class="address-nav__icon-mail" width="16" height="12">
-                  <use href="./icon/symbol-defs.svg#icon-mail"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="address-nav__item">
-              <a class="link address-nav__link tel" href="tel:+380961111111">
-                <svg
-                  class="address-nav__icon-smartphone"
-                  width="10"
-                  height="16"
+        <a href="/" class="logo navigation__logo"
+          >Web<span class="navigation__half-logo">Studio</span></a
+        >
+        <div class="menu-container" data-menu>
+          <nav class="navigation">
+            <ul class="site-nav without-dot list">
+              <li class="site-nav__item">
+                <a class="link site-nav__link" href="index.html">Студия</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="link site-nav__link current" href="portfolio.html"
+                  >Портфолио</a
                 >
-                  <use href="./icon/symbol-defs.svg#icon-smartphone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </address>
+              </li>
+              <li class="site-nav__item">
+                <a class="link site-nav__link" href="/">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <!--/меню-->
+          <!--адрес-->
+          <div>
+            <address class="address">
+              <ul class="address-nav without-dot list">
+                <li class="address-nav__item">
+                  <a
+                    class="link address-nav__link"
+                    href="mailto:info@devstudio.com"
+                  >
+                    <svg class="address-nav__icon-mail" width="14" height="10">
+                      <use href="./icon/symbol-defs.svg#icon-mail"></use>
+                    </svg>
+                    info@devstudio.com</a
+                  >
+                </li>
+                <li class="address-nav__item">
+                  <a class="link address-nav__link" href="tel:+380961111111">
+                    <svg
+                      class="address-nav__icon-smartphone"
+                      width="10"
+                      height="14"
+                    >
+                      <use href="./icon/symbol-defs.svg#icon-smartphone"></use>
+                    </svg>
+                    +38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+            <div class="mobile-social-network">
+              <ul class="list without-dot mobile-social-network__list">
+                <li class="mobile-social-network__item">
+                  <a class="link mobile-social-network__link" href="#"
+                    >Instagram</a
+                  >
+                </li>
+                <li class="mobile-social-network__item">
+                  <a class="link mobile-social-network__link" href="#"
+                    >Twitter</a
+                  >
+                </li>
+                <li class="mobile-social-network__item">
+                  <a class="link mobile-social-network__link" href="#"
+                    >Facebook</a
+                  >
+                </li>
+                <li class="mobile-social-network__item">
+                  <a class="link mobile-social-network__link" href="#"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button class="menu-button" data-menu-button>
+          <svg width="40" height="40">
+            <use
+              class="menu-button__icon-burger"
+              href="./icon/symbol-defs.svg#icon-menu-button"
+            ></use>
+            <use
+              class="menu-button__icon-cross"
+              href="./icon/symbol-defs.svg#icon-cross-button"
+            ></use>
+          </svg>
+        </button>
         <!--/адрес-->
       </div>
     </header>
@@ -77,7 +117,6 @@
     <main>
       <section class="section-item">
         <div class="container section-item__container">
-          <h1 class="caption section-item__caption hide">Наше портфолио</h1>
           <ul class="section-item__filters without-dot list">
             <li>
               <button class="button">Все</button>
@@ -98,12 +137,32 @@
           <ul class="section-item__product list without-dot">
             <li class="section-item__item">
               <div class="section-item__picture">
-                <img
-                  src="./img/portfolio/tecnocratico.jpg"
-                  alt="Технокряк"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./img/portfolio/tecnocratico.jpg            1x,
+                      ./img/portfolio/tecnocratico-740x588@2x.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./img/portfolio/tecnocratico-354x294.jpg    1x,
+                      ./img/portfolio/tecnocratico-708x588@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    class="section-item__image"
+                    srcset="
+                      ./img/portfolio/tecnocratico-450x294.jpg    1x,
+                      ./img/portfolio/tocnocratico-900x588@2x.jpg 2x
+                    "
+                    src="./img/portfolio/tecnocratico-450x294.jpg"
+                    alt=""
+                  />
+                </picture>
+
                 <p
                   class="text section-item__text section-item__text--moving-bg"
                 >
@@ -119,12 +178,32 @@
             </li>
             <li class="section-item__item">
               <div class="section-item__picture">
-                <img
-                  src="./img/portfolio/poster.jpg"
-                  alt="Постер"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./img/portfolio/poster.jpg            1x,
+                      ./img/portfolio/poster-740x588@2x.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./img/portfolio/poster-354x294.jpg    1x,
+                      ./img/portfolio/poster-708x588@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    class="section-item__image"
+                    srcset="
+                      ./img/portfolio/poster-450x294.jpg    1x,
+                      ./img/portfolio/poster-900x588@2x.jpg 2x
+                    "
+                    src="./img/portfolio/poster-450x294.jpg"
+                    alt=""
+                  />
+                </picture>
+
                 <p
                   class="text section-item__text section-item__text--moving-bg"
                 >
@@ -141,12 +220,32 @@
             </li>
             <li class="section-item__item">
               <div class="section-item__picture">
-                <img
-                  src="./img/portfolio/resturant-seafood.jpg"
-                  alt="Лэйбл ресторана"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./img/portfolio/resturant-seafood.jpg            1x,
+                      ./img/portfolio/resturant-seafood-740x588@2x.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./img/portfolio/resturant-seafood-354x294.jpg    1x,
+                      ./img/portfolio/resturant-seafood-708x588@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    class="section-item__image"
+                    srcset="
+                      ./img/portfolio/resturant-seafood-450x294.jpg    1x,
+                      ./img/portfolio/resturant-seafood-900x588@2x.jpg 2x
+                    "
+                    src="./img/portfolio/resturant-seafood-450x294.jpg"
+                    alt=""
+                  />
+                </picture>
+
                 <p
                   class="text section-item__text section-item__text--moving-bg"
                 >
@@ -161,12 +260,32 @@
             </li>
             <li class="section-item__item">
               <div class="section-item__picture">
-                <img
-                  src="./img/portfolio/project-prime.jpg"
-                  alt="Наушники"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./img/portfolio/project-prime.jpg            1x,
+                      ./img/portfolio/project-prime-740x588@2x.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./img/portfolio/project-prime-354x294.jpg    1x,
+                      ./img/portfolio/project-prime-708x588@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    class="section-item__image"
+                    srcset="
+                      ./img/portfolio/project-prime-450x294.jpg    1x,
+                      ./img/portfolio/project-prime-900x588@2x.jpg 2x
+                    "
+                    src="./img/portfolio/project-prime-450x294.jpg"
+                    alt=""
+                  />
+                </picture>
+
                 <p
                   class="text section-item__text section-item__text--moving-bg"
                 >
@@ -181,12 +300,32 @@
             </li>
             <li class="section-item__item">
               <div class="section-item__picture">
-                <img
-                  src="./img/portfolio/project-boxes.jpg"
-                  alt="Коробки"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./img/portfolio/project-boxes.jpg            1x,
+                      ./img/portfolio/project-boxes-740x588@2x.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./img/portfolio/project-boxes-354x294.jpg    1x,
+                      ./img/portfolio/project-boxes-708x588@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    class="section-item__image"
+                    srcset="
+                      ./img/portfolio/project-boxes-450x294.jpg    1x,
+                      ./img/portfolio/project-boxes-900x588@2x.jpg 2x
+                    "
+                    src="./img/portfolio/project-boxes-450x294.jpg"
+                    alt=""
+                  />
+                </picture>
+
                 <p
                   class="text section-item__text section-item__text--moving-bg"
                 >
@@ -201,12 +340,32 @@
             </li>
             <li class="section-item__item">
               <div class="section-item__picture">
-                <img
-                  src="./img/portfolio/web-site.jpg"
-                  alt="Монитор"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./img/portfolio/web-site.jpg            1x,
+                      ./img/portfolio/web-site-740x588@2x.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./img/portfolio/web-site-354x294.jpg    1x,
+                      ./img/portfolio/web-site-708x588@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    class="section-item__image"
+                    srcset="
+                      ./img/portfolio/web-site-450x294.jpg    1x,
+                      ./img/portfolio/web-site-900x588@2x.jpg 2x
+                    "
+                    src="./img/portfolio/web-site-450x294.jpg"
+                    alt=""
+                  />
+                </picture>
+
                 <p
                   class="text section-item__text section-item__text--moving-bg"
                 >
@@ -223,12 +382,32 @@
             </li>
             <li class="section-item__item">
               <div class="section-item__picture">
-                <img
-                  src="./img/portfolio/edizione-LE.jpg"
-                  alt="Журнал"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./img/portfolio/edizione-LE.jpg            1x,
+                      ./img/portfolio/edizione-LE-740x588@2x.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./img/portfolio/edizione-LE-354x294.jpg    1x,
+                      ./img/portfolio/edizione-LE-708x588@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    class="section-item__image"
+                    srcset="
+                      ./img/portfolio/edizione-LE-450x294.jpg    1x,
+                      ./img/portfolio/edizione-LE-900x588@2x.jpg 2x
+                    "
+                    src="./img/portfolio/edizione-LE-450x294.jpg"
+                    alt=""
+                  />
+                </picture>
+
                 <p
                   class="text section-item__text section-item__text--moving-bg"
                 >
@@ -245,12 +424,32 @@
             </li>
             <li class="section-item__item">
               <div class="section-item__picture">
-                <img
-                  src="./img/portfolio/project-lab.jpg"
-                  alt="Бирка"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./img/portfolio/project-lab.jpg            1x,
+                      ./img/portfolio/project-lab-740x588@2x.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./img/portfolio/project-lab-354x294.jpg    1x,
+                      ./img/portfolio/project-lab-708x588@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    class="section-item__image"
+                    srcset="
+                      ./img/portfolio/project-lab-450x294.jpg    1x,
+                      ./img/portfolio/project-lab-900x588@2x.jpg 2x
+                    "
+                    src="./img/portfolio/project-lab-450x294.jpg"
+                    alt=""
+                  />
+                </picture>
+
                 <p
                   class="text section-item__text section-item__text--moving-bg"
                 >
@@ -265,12 +464,32 @@
             </li>
             <li class="section-item__item">
               <div class="section-item__picture">
-                <img
-                  src="./img/portfolio/bussines.jpg"
-                  alt="Планшет"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./img/portfolio/bussines.jpg            1x,
+                      ./img/portfolio/bussines-740x588@2x.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./img/portfolio/bussines-354x294.jpg    1x,
+                      ./img/portfolio/bussines-708x588@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    class="section-item__image"
+                    srcset="
+                      ./img/portfolio/bussines-450x294.jpg    1x,
+                      ./img/portfolio/bussines-900x588@2x.jpg 2x
+                    "
+                    src="./img/portfolio/bussines-450x294.jpg"
+                    alt=""
+                  />
+                </picture>
+
                 <p
                   class="text section-item__text section-item__text--moving-bg"
                 >
@@ -377,5 +596,8 @@
       </div>
     </footer>
     <!--/Подвал-->
+    <!-- скрипт -->
+    <script src="./js/menu.js"></script>
+    <!-- /скрипт -->
   </body>
 </html>

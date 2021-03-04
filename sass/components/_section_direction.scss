@@ -1,6 +1,13 @@
 /*section-direction*/
+
 /*============ Чем занимаемся ============*/
 .section-direction {
+  display: none;
+
+  @media screen and (min-width: $desktop) {
+    display: block;
+  }
+
   &__caption {
     font-weight: 700;
     font-size: 36px;

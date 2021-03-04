@@ -1,4 +1,5 @@
 /*============ Настройки по умолчанию ============*/
+
 body {
   letter-spacing: 0.03em;
   background-color: $color-background-white;
@@ -8,14 +9,21 @@ body {
 
 /*container*/
 .container {
-  width: 1200px;
+  // outline: 1px solid tomato;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
 }
-
-/*текущая страница*/
 
 /*заголовки*/
 .caption {
@@ -29,11 +37,6 @@ body {
   color: $color-text-second;
 
   font-weight: 400;
-}
-
-/*кнопки*/
-.btn {
-  border: none;
 }
 
 /*сылки*/

@@ -19,11 +19,6 @@
   }
 
   &__filters {
-    width: 611px;
-  }
-
-  &__item {
-    width: 370px;
   }
 
   &__item:hover {
@@ -51,7 +46,15 @@
     font-size: 18px;
     line-height: 1.55;
 
-    padding: 63px 24px;
+    padding: 77px 24px;
+
+    @media screen and (min-width: $tablet) {
+      padding: 49px 24px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 63px 24px;
+    }
 
     transition: transform $transition-duration-timing;
   }

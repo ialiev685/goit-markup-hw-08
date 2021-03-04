@@ -1,54 +1,104 @@
-/*Контенер header*/
 .header {
+  margin-left: auto;
+  margin-right: auto;
   background-color: $color-background-white;
   border-bottom: 1px solid $color-border-header;
 
   &__container {
+    position: relative;
+
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 60px;
+    @media screen and (min-width: $tablet) {
+      height: 80px;
+    }
+  }
+}
+
+.address-nav {
+  @media screen and(min-width: $desktop) {
+    display: flex;
+  }
+  @media screen and(min-width: $mobile-s) and (max-width: $tablet - 1) {
+    margin-bottom: 64px;
+  }
+
+  &__item:nth-child(1) {
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
+      margin-bottom: 10px;
+    }
+
+    @media screen and(min-width: $desktop) {
+      margin-right: 30px;
+    }
+  }
+
+  &__icon-mail,
+  &__icon-smartphone {
+    display: none;
+    @media screen and(min-width:$tablet) {
+      display: inline-block;
+    }
+  }
+}
+
+.address-nav,
+.site-nav {
+  @media screen and (min-width: $mobile-s) and (max-width: $tablet - 1) {
+    &__item {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  &.is-open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: $tablet) {
+    align-items: center;
+    &.is-open {
+      flex-direction: unset;
+    }
+  }
+  @media screen and (min-width: $mobile-s) and (max-width: $tablet - 1) {
+    padding: 48px 40px;
+  }
+}
+
+.mobile-social-network {
+  &__list {
+    display: flex;
   }
 }
 
 /*логотип*/
 .navigation {
-  &__logo {
-    margin-right: 93px;
-  }
   &__half-logo {
     color: $color-text-primary;
   }
 }
-/*навигация сайта и адрес*/
-.address-nav,
+
 .site-nav {
-  display: flex;
+  @media screen and(min-width: $tablet) {
+    display: flex;
 
-  &__item:not(:last-child) {
-    margin-right: 50px;
+    margin-right: 80px;
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
+
+    &__link {
+      padding: 31px 0;
+    }
   }
-}
-
-.address-nav__link,
-.site-nav__link {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-/*адрес*/
-.address {
-  margin-left: auto;
-}
-
-/*навигация*/
-.navigation {
-  display: flex;
-  align-items: center;
-}
-
-/* Отметка о текущей странице */
-.current::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  @media screen and(min-width: $desktop) {
+    margin-right: 305px;
+  }
 }

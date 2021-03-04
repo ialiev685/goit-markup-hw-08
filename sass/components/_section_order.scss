@@ -1,26 +1,41 @@
 /*section-order*/
 /*============ Сделать заказ ============*/
+
 .section-order {
-  background-size: cover;
-  height: 600px;
   background-image: linear-gradient(
       to right,
       $color-bg-transparent-overlay,
       $color-bg-transparent-overlay
     ),
-    url("../img/studio/bg-order.jpg");
+    url("../img/studio/order-768x400.jpg");
   background-position: center;
+  background-size: cover;
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        $color-bg-transparent-overlay,
+        $color-bg-transparent-overlay
+      ),
+      url("../img/studio/order-1536x800@2x.jpg");
+  }
 
   &__caption {
-    width: 696px;
-
     color: $color-text-inverse;
+    width: 360px;
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.615;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    @media screen and (min-width: $desktop) {
+      width: 696px;
+
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
 }

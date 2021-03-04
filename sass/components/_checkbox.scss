@@ -10,8 +10,14 @@
   &__label-checkbox,
   &__link {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+
+    font-size: 12px;
+    line-height: 1.16;
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+      line-height: 1.71;
+      text-align: left;
+    }
     color: $color-text-second;
   }
 

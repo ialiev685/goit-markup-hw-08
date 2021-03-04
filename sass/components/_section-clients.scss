@@ -3,8 +3,8 @@
 .section-clients {
   &__caption {
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
+    font-size: 28px;
+    line-height: 1.178;
     text-align: center;
   }
 
@@ -13,7 +13,7 @@
     color: $color-fill-usual;
 
     display: inline-flex;
-    width: 170px;
+    width: 100%;
     height: 90px;
     border: 1px solid $color-fill-usual;
     border-radius: 4px;

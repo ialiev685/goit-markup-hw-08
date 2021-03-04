@@ -22,53 +22,95 @@
     <header class="header">
       <!--меню-->
       <div class="container header__container">
-        <nav class="navigation">
-          <a href="/" class="logo navigation__logo"
-            >Web<span class="navigation__half-logo">Studio</span></a
-          >
-          <ul class="site-nav without-dot list">
-            <li class="site-nav__item">
-              <a class="link site-nav__link current" href="index.html"
-                >Студия</a
-              >
-            </li>
-            <li class="site-nav__item">
-              <a class="link site-nav__link" href="portfolio.html">Портфолио</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="link site-nav__link" href="/">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <!--/меню-->
-        <!--адрес-->
-        <address class="address">
-          <ul class="address-nav without-dot list">
-            <li class="address-nav__item">
-              <a
-                class="link address-nav__link mail"
-                href="mailto:info@devstudio.com"
-              >
-                <svg class="address-nav__icon-mail" width="16" height="12">
-                  <use href="./icon/symbol-defs.svg#icon-mail"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="address-nav__item">
-              <a class="link address-nav__link tel" href="tel:+380961111111">
-                <svg
-                  class="address-nav__icon-smartphone"
-                  width="10"
-                  height="16"
+        <a href="/" class="logo navigation__logo"
+          >Web<span class="navigation__half-logo">Studio</span></a
+        >
+        <div class="menu-container" data-menu>
+          <nav class="navigation">
+            <ul class="site-nav without-dot list">
+              <li class="site-nav__item">
+                <a class="link site-nav__link current" href="index.html"
+                  >Студия</a
                 >
-                  <use href="./icon/symbol-defs.svg#icon-smartphone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </address>
+              </li>
+              <li class="site-nav__item">
+                <a class="link site-nav__link" href="portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="site-nav__item">
+                <a class="link site-nav__link" href="/">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <!--/меню-->
+          <!--адрес-->
+          <div>
+            <address class="address">
+              <ul class="address-nav without-dot list">
+                <li class="address-nav__item">
+                  <a
+                    class="link address-nav__link"
+                    href="mailto:info@devstudio.com"
+                  >
+                    <svg class="address-nav__icon-mail" width="14" height="10">
+                      <use href="./icon/symbol-defs.svg#icon-mail"></use>
+                    </svg>
+                    info@devstudio.com</a
+                  >
+                </li>
+                <li class="address-nav__item">
+                  <a class="link address-nav__link" href="tel:+380961111111">
+                    <svg
+                      class="address-nav__icon-smartphone"
+                      width="10"
+                      height="14"
+                    >
+                      <use href="./icon/symbol-defs.svg#icon-smartphone"></use>
+                    </svg>
+                    +38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+            <div class="mobile-social-network">
+              <ul class="list without-dot mobile-social-network__list">
+                <li class="mobile-social-network__item">
+                  <a class="link mobile-social-network__link" href="#"
+                    >Instagram</a
+                  >
+                </li>
+                <li class="mobile-social-network__item">
+                  <a class="link mobile-social-network__link" href="#"
+                    >Twitter</a
+                  >
+                </li>
+                <li class="mobile-social-network__item">
+                  <a class="link mobile-social-network__link" href="#"
+                    >Facebook</a
+                  >
+                </li>
+                <li class="mobile-social-network__item">
+                  <a class="link mobile-social-network__link" href="#"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button class="menu-button" data-menu-button>
+          <svg class="menu-button__icons" width="24" height="16">
+            <use
+              class="menu-button__icon-burger"
+              href="./icon/symbol-defs.svg#icon-menu-button"
+            ></use>
+            <use
+              class="menu-button__icon-cross"
+              href="./icon/symbol-defs.svg#icon-cross-button"
+            ></use>
+          </svg>
+        </button>
         <!--/адрес-->
       </div>
     </header>
@@ -152,6 +194,10 @@
             <li class="section-direction__item">
               <img
                 src="./img/studio/hobby_1.jpg"
+                srcset="
+                  ./img/studio/hobby_1.jpg            1x,
+                  ./img/studio/hobby_1-740x588@2x.jpg 2x
+                "
                 alt="Разработка компьютерных приложений"
                 width="370"
                 height="294"
@@ -161,6 +207,10 @@
             <li class="section-direction__item">
               <img
                 src="./img/studio/hobby_2.jpg"
+                srcset="
+                  ./img/studio/hobby_2.jpg            1x,
+                  ./img/studio/hobby_2-740x588@2x.jpg 2x
+                "
                 alt="Разработка мобильных приложений"
                 width="370"
                 height="294"
@@ -170,6 +220,10 @@
             <li class="section-direction__item">
               <img
                 src="./img/studio/hobby_3.jpg"
+                srcset="
+                  ./img/studio/hobby_3.jpg            1x,
+                  ./img/studio/hobby_3-740x588@2x.jpg 2x
+                "
                 alt="Дизайн"
                 width="370"
                 height="294"
@@ -188,13 +242,32 @@
           </h2>
           <ul class="list section-team__list without-dot">
             <li class="section-team__item">
-              <img
-                class="section-team__photo"
-                src="./img/studio/person_1.jpg"
-                alt="1-й человек"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./img/studio/person_1-270x260.jpg    1x,
+                    ./img/studio/person_1-540x520@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/studio/person_1-354x374.jpg    1x,
+                    ./img/studio/person_1-708x748@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="section-team__photo"
+                  srcset="
+                    ./img/studio/person_1-450x460.jpg    1x,
+                    ./img/studio/person_1-900x920@2x.jpg 2x
+                  "
+                  src="./img/studio/person_1-450x460.jpg"
+                  alt="Персона № 1"
+                />
+              </picture>
+
               <h3
                 class="caption section-team__caption section-team__caption--name"
               >
@@ -233,13 +306,31 @@
               </ul>
             </li>
             <li class="section-team__item">
-              <img
-                class="section-team__photo"
-                src="./img/studio/person_2.jpg"
-                alt="2-й человек"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./img/studio/person_2-270x260.jpg    1x,
+                    ./img/studio/person_2-540x520@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/studio/person_2-354x374.jpg    1x,
+                    ./img/studio/person_2-708x748@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="section-team__photo"
+                  srcset="
+                    ./img/studio/person_2-450x460.jpg    1x,
+                    ./img/studio/person_2-900x920@2x.jpg 2x
+                  "
+                  src="./img/studio/person_2-450x460.jpg"
+                  alt="Персона № 1"
+                />
+              </picture>
               <h3
                 class="caption section-team__caption section-team__caption--name"
               >
@@ -278,13 +369,31 @@
               </ul>
             </li>
             <li class="section-team__item">
-              <img
-                class="section-team__photo"
-                src="./img/studio/person_3.jpg"
-                alt="3-й человек"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./img/studio/person_3-270x260.jpg    1x,
+                    ./img/studio/person_3-540x520@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/studio/person_3-354x374.jpg    1x,
+                    ./img/studio/person_3-708x748@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="section-team__photo"
+                  srcset="
+                    ./img/studio/person_3-450x460.jpg    1x,
+                    ./img/studio/person_3-900x920@2x.jpg 2x
+                  "
+                  src="./img/studio/person_3-450x460.jpg"
+                  alt="Персона № 1"
+                />
+              </picture>
               <h3
                 class="caption section-team__caption section-team__caption--name"
               >
@@ -323,13 +432,31 @@
               </ul>
             </li>
             <li class="section-team__item">
-              <img
-                class="section-team__photo"
-                src="./img/studio/person_4.jpg"
-                alt="4-й человек"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./img/studio/person_4-270x260.jpg    1x,
+                    ./img/studio/person_4-540x520@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/studio/person_4-354x374.jpg    1x,
+                    ./img/studio/person_4-708x748@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="section-team__photo"
+                  srcset="
+                    ./img/studio/person_4-450x460.jpg    1x,
+                    ./img/studio/person_4-900x920@2x.jpg 2x
+                  "
+                  src="./img/studio/person_4-450x460.jpg"
+                  alt="Персона № 1"
+                />
+              </picture>
               <h3
                 class="caption section-team__caption section-team__caption--name"
               >
@@ -376,7 +503,7 @@
         <div class="container section-clients__container">
           <h2 class="caption section-clients__caption">Постоянные клиенты</h2>
           <ul class="list section-clients__list without-dot">
-            <li class="item">
+            <li class="section-clients__item">
               <a href="#" class="link section-clients__link"
                 ><svg
                   class="section-clients__icon-client"
@@ -387,7 +514,7 @@
                 </svg>
               </a>
             </li>
-            <li class="item">
+            <li class="section-clients__item">
               <a href="#" class="link section-clients__link"
                 ><svg
                   class="section-clients__icon-client"
@@ -398,7 +525,7 @@
                 </svg>
               </a>
             </li>
-            <li class="item">
+            <li class="section-clients__item">
               <a href="#" class="link section-clients__link"
                 ><svg
                   class="section-clients__icon-client"
@@ -409,7 +536,7 @@
                 </svg>
               </a>
             </li>
-            <li class="item">
+            <li class="section-clients__item">
               <a href="#" class="link section-clients__link">
                 <svg
                   class="section-clients__icon-client"
@@ -420,7 +547,7 @@
                 </svg>
               </a>
             </li>
-            <li class="item">
+            <li class="section-clients__item">
               <a href="#" class="link section-clients__link"
                 ><svg
                   class="section-clients__icon-client"
@@ -431,7 +558,7 @@
                 </svg>
               </a>
             </li>
-            <li class="item">
+            <li class="section-clients__item">
               <a href="#" class="link section-clients__link"
                 ><svg
                   class="section-clients__icon-client"
@@ -611,6 +738,7 @@
     <!-- /Модальное окно -->
     <!-- скрипт -->
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
     <!-- /скрипт -->
   </body>
 </html>
