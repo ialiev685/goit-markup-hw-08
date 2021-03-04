@@ -629,7 +629,7 @@ body {
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .menu-container {
     display: none;
     position: absolute;
@@ -798,9 +798,13 @@ body {
 
 /*section-direction*/
 /*============ Чем занимаемся ============*/
-@media screen and (min-width: 320px) and (max-width: 1199px) {
+.section-direction {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
   .section-direction {
-    display: none;
+    display: block;
   }
 }
 
@@ -902,7 +906,6 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
-/*old style desktop*/
 .section-team {
   background-color: #f5f4fa;
 }
@@ -1030,13 +1033,8 @@ body {
 
 .section-clients__item {
   margin-bottom: 30px;
-}
-
-@media screen and (min-width: 320px) {
-  .section-clients__item {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 @media screen and (min-width: 480px) {

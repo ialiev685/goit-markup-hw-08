@@ -2,8 +2,10 @@
 
 /*============ Чем занимаемся ============*/
 .section-direction {
-  @media screen and (min-width: $mobile-s) and (max-width: $desktop - 1) {
-    display: none;
+  display: none;
+
+  @media screen and (min-width: $desktop) {
+    display: block;
   }
 
   &__caption {

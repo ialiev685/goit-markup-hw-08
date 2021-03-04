@@ -6,9 +6,9 @@
 
   &__item {
     margin-bottom: 30px;
-    @media screen and (min-width: $mobile-s) {
-      flex-basis: 100%;
-    }
+
+    flex-basis: 100%;
+
     @media screen and (min-width: $mobile) {
       flex-basis: calc((100% - 30px) / 2);
     }
